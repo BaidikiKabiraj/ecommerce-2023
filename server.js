@@ -1,4 +1,6 @@
 import express from "express";
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 import colors from "colors";
 import dotenv from "dotenv";
 import morgan from "morgan";
@@ -8,6 +10,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 const path= require("path");
+
 
 //configure env
 dotenv.config();
